@@ -1,4 +1,4 @@
-window.onload = function {
+window.onload = function (){
 
     let alphabet = [
         'a', 'b', 'c',
@@ -16,8 +16,12 @@ window.onload = function {
     let guess ;      //Guess
     let guesses = [ ];    //Stored guesses
     let lives ;     //lives counter
-    let counter ;   //Count crrect guesses
+    let counter ;   //Count correct guesses
     
-    
+    //select random string from alphabet
+    //append document to diplay underscore until correct selctor
+    //
 
-}
+        
+
+};
