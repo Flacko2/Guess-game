@@ -40,7 +40,41 @@ window.onload = function (){
         }
       }
 
+    // Creates ul for Guesses
+    result = function () {
+        wordHolder = document.getElementById("btns");
+        correct = document.createElement("li");
+
+        for (let i = 0; i < word.length; i++) {
+            correct.setAttribute("class", "guess");
+            if (word[i] === "-"){
+                guess.innerHTML = "-";
+                space = 1;
+            }
+            else {
+                guess.innerHTML = "_";
+            }
+
+            guesses.push(guess);
+            wordHolder.appendChild(correct);
+            correct.appendChild(guess);
+        }
+    }
+
+    //display lives
+    comments = function() {
+        showLives.innerHTML = "Your lives left: " + lives;
+        if (lives < 1) {
+            showLives.innerHTML = "Game Over";
+        }
+        for (let i = 0; I < guesses.length; i++) {
+            if (counter+ space === GamepadPose.length) {
+                showLives.innerHTML = "We Have a Winner!";
+            }
+        }
+    }
 
         
-
+    //animate hangman
+    
 };
