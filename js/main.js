@@ -12,15 +12,34 @@ window.onload = function (){
         'y', 'z'
     ];
 
-    let word ;       //selected word
-    let guess ;      //Guess
-    let guesses = [ ];    //Stored guesses
-    let lives ;     //lives counter
-    let counter ;   //Count correct guesses
+    let word ;          //selected word
+    let guess ;         //Guess
+    let word ;          //selected word
+    let guesses = [ ];  //Stored guesses
+    let lives ;         //lives counter
+    let counter ;       //Count correct guesses
+    let space;          //number of letter displayed in word
+
+    // get elements
+    const showLives = document.getElementById("lives");
     
-    //select random string from alphabet
-    //append document to diplay underscore until correct selctor
-    //
+    
+    // creates alphabet array into ul element
+    let buttons = function () {
+        myButtons = document.getElementById('buttons');
+        letters = document.createElement('ul');
+    
+        for (let i = 0; i < alphabet.length; i++) {
+          letters.id = 'alphabet';
+          list = document.createElement('li');
+          list.id = 'letter';
+          list.innerHTML = alphabet[i];
+          check();
+          myButtons.appendChild(letters);
+          letters.appendChild(list);
+        }
+      }
+
 
         
 
